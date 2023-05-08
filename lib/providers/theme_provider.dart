@@ -54,6 +54,29 @@ class ThemeProvider extends ChangeNotifier {
 }
 
 //theme data for each theme
+// ThemeData darkTheme = ThemeData(
+//   useMaterial3: true,
+//   primaryColor: Colors.black,
+//   brightness: Brightness.dark,
+//   scaffoldBackgroundColor: Colors.black,
+//   cardTheme: const CardTheme(surfaceTintColor: Color(0xff101820)),
+//   fontFamily: "Lato",
+//   iconTheme: const IconThemeData(color: Color(0xffcfcfcf)),
+//   appBarTheme: AppBarTheme(
+//       surfaceTintColor: Colors.black,
+//       iconTheme: const IconThemeData(color: Colors.white),
+//       titleTextStyle: const TextTheme(
+//         headlineMedium: TextStyle(
+//           color: Color.fromARGB(255, 252, 248, 248),
+//         ),
+//         // displayLarge: TextStyle(color: Colors.black),
+//         // displaySmall: TextStyle(color: Colors.black),
+//         // displayMedium: TextStyle(color: Colors.black),
+//         // bodyLarge: TextStyle(color: Colors.black),
+//         // bodyMedium: TextStyle(color: Colors.black),
+//         // bodySmall: TextStyle(color: Colors.black),
+//       ).headlineMedium),
+// );
 ThemeData darkTheme = ThemeData(
   useMaterial3: true,
   primaryColor: Colors.black,
@@ -63,19 +86,17 @@ ThemeData darkTheme = ThemeData(
   fontFamily: "Lato",
   iconTheme: const IconThemeData(color: Color(0xffcfcfcf)),
   appBarTheme: AppBarTheme(
-      surfaceTintColor: Colors.black,
-      iconTheme: const IconThemeData(color: Colors.white),
-      titleTextStyle: const TextTheme(
-        headlineMedium: TextStyle(
-          color: Color.fromARGB(255, 253, 252, 252),
-        ),
-        // displayLarge: TextStyle(color: Colors.white),
-        // displaySmall: TextStyle(color: Colors.white),
-        // displayMedium: TextStyle(color: Colors.white),
-        // bodyLarge: TextStyle(color: Colors.white),
-        // bodyMedium: TextStyle(color: Colors.white),
-        // bodySmall: TextStyle(color: Colors.white),
-      ).headlineMedium),
+    surfaceTintColor: Colors.black,
+    iconTheme: const IconThemeData(color: Colors.white),
+    titleTextStyle: const TextTheme(
+      headlineMedium: TextStyle(
+        color: Color.fromARGB(255, 252, 248, 248),
+        fontWeight:
+            FontWeight.bold, // Add this line to set the text weight to bold
+      ),
+    ).headlineMedium?.copyWith(
+        color: Colors.black), // Add this line to set the text color to black
+  ),
 );
 
 ThemeData lightTheme = ThemeData(

@@ -29,7 +29,7 @@ void popUpDialog(BuildContext context, TextEditingController habitController) {
           ),
           ElevatedButton(
             onPressed: () {
-              provider.habits.add(habitController.text);
+              provider.addHabits(habitController.text);
               habitController.clear();
               Navigator.of(context).pop();
             },

@@ -16,21 +16,22 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   TextEditingController habitController = TextEditingController();
 
-// @override
-//   void setState(VoidCallback fn) {
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      final provider = Provider.of<DBProvider>(context, listen: false);
+      provider.getHabit();
+    });
+    super.initState();
+  }
 
-//     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-//       final auth = Provider.of<DBProvider>(context, listen: false);
-//       auth.getItem();
-//     });
-//     super.setState(fn);
-//   }
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<ThemeProvider>(context);
     final dbProvider = Provider.of<DBProvider>(context);
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         leading: IconButton(
           icon: const Icon(
             Icons.light,
@@ -45,7 +46,6 @@ class _MainPageState extends State<MainPage> {
           ListView.builder(
             itemCount: dbProvider.habits.length,
             itemBuilder: (context, index) {
-              print(dbProvider.habits.length);
               var data = dbProvider.habits[index];
               return ItemContainer(
                 habit: data,

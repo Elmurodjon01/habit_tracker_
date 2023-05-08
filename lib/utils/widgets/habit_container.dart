@@ -2,6 +2,7 @@
 
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
+import 'package:habit_tracker_/constants/const.dart';
 import 'package:provider/provider.dart';
 
 import '../../providers/theme_provider.dart';
@@ -55,7 +56,7 @@ class ItemContainer extends StatelessWidget {
                     height: 45,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: appBarColor,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Center(
