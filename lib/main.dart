@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<ThemeProvider>(context);
     return MaterialApp(
+          debugShowCheckedModeBanner: false,
       theme: provider.currentTheme,
       home: const MainPage(),
     );
