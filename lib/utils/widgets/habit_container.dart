@@ -59,12 +59,17 @@ class ItemContainer extends StatelessWidget {
                       color: appBarColor,
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Center(
-                      child: Text(
-                        habit,
-                        style: const TextStyle(fontWeight: FontWeight.bold),
-                        overflow: TextOverflow.ellipsis,
-                      ),
+                    child: Row(
+                      children: [
+                        Checkbox(value: true, onChanged: (p0) {}),
+                        Center(
+                          child: Text(
+                            habit,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
